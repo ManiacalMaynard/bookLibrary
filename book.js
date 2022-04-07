@@ -5,6 +5,6 @@ function Book(title, author, pages, read) {
   this.read = read
 };
 
-const book = new Book('The Hobbit', 'J.R.R. Tolkien', '295 Pages', 'Yes!')
+// const book = new Book('The Hobbit', 'J.R.R. Tolkien', '295 Pages', 'Yes!')
 
 console.log(book.title)
