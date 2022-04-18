@@ -1,3 +1,69 @@
+:root {
+  --blood-red: rgb(200, 45, 40);
+  --tan-light: rgb(255, 248, 230);
+  --tan-dark: rgb(255, 243, 214);
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--tan-light);
+}
+
+button {
+  backgroud-color: var(--blood-red);
+}
+
+#bookCard {
+  padding: 1rem;
+  width: 250px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--tan-dark);
+  border: 1px solid #aaaaaa;
+  border-radius: 3%;
+}
+
 .bookImage {
   width: 10rem;
+}
+
+.arrow-pointer {
+  width: 250px;
+  height: 50px;
+  background: var(--blood-red);
+  position: relative;
+}
+
+.arrow-pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid var(--tan-light);
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+}
+
+.arrow-pointer:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 25px solid var(--tan-light);
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
 }

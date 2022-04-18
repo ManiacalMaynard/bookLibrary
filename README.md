@@ -18,6 +18,8 @@ Learning is fun. [Here's the project page](https://www.theodinproject.com/lesson
 
 ## Addtional Items
 
+- [ ] Design and build responsive UX/UI, mobile first.
+
 - [ ] Add accessibility essentials to [WCAG standards](https://www.w3.org/wiki/Accessibility_basics)
 
 - [ ] Add links to Amazon because, why not? Note: this is more practice for another project on my list for this summer.

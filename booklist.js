@@ -5,6 +5,7 @@ export const bookList = [
     title: 'The Bhagvahad Gita',
     author: 'Anonymous',
     link: 'https://amzn.to/3JcfdaM',
+    isRead: 'Yes'
   },
   {
     id: '0001',
