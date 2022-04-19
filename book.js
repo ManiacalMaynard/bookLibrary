@@ -1,8 +1,8 @@
-function Book(title, author, pages, read) {
+function Book(title, author, pages, inLibrary) {
   this.title = title
   this.author = author
   this.pages = pages
-  this.read = read
+  this.inLibrary = inLibrary
 };
 
 // const book = new Book('The Hobbit', 'J.R.R. Tolkien', '295 Pages', 'Yes!')

@@ -5,7 +5,7 @@ export const bookList = [
     title: 'The Bhagvahad Gita',
     author: 'Anonymous',
     link: 'https://amzn.to/3JcfdaM',
-    isRead: 'Yes'
+    inLibrary: true
   },
   {
     id: '0001',
@@ -13,6 +13,7 @@ export const bookList = [
     title: 'Zen Mind, Beginner\'s Mind',
     author: 'Shunryu Suzuki',
     link: 'https://amzn.to/3JcddiM',
+    inLibrary: true
   },
   {
     id: '0002',
@@ -20,6 +21,7 @@ export const bookList = [
     title: 'Each Moment is the Universe',
     author: 'Dainin Katagiri Roshi',
     link: 'https://amzn.to/3NP6dfi',
+    inLibrary: false
   },
   {
     id: '0003',
@@ -27,6 +29,7 @@ export const bookList = [
     title: 'The Miracle of Mindfulness',
     author: 'Thich Nhat Hanh',
     link: 'https://amzn.to/3vgHx7d',
+    inLibrary: true
   },
   {
     id: '0004',
@@ -34,6 +37,7 @@ export const bookList = [
     title: 'What is Zen?',
     author: 'Alan Watts',
     link: 'https://amzn.to/36VJnSE',
+    inLibrary: true
   },
   {
     id: '0005',
@@ -41,6 +45,7 @@ export const bookList = [
     title: 'The Essential Teachings of Zen Master Hakuin',
     author: 'Norman Waddell',
     link: 'https://amzn.to/3r5OCWM',
+    inLibrary: true
   },
   {
     id: '0006',
@@ -48,6 +53,7 @@ export const bookList = [
     title: 'Like a Dream, Like a Fantasy',
     author: 'Nyogen Senzaki',
     link: 'https://amzn.to/3DKrfqN',
+    inLibrary: false
   },
   {
     id: '0007',
@@ -55,6 +61,7 @@ export const bookList = [
     title: 'The Tao of Pooh & The Te of Piglet',
     author: 'Benjamin Hoff',
     link: 'https://amzn.to/3j6SEcT',
+    inLibrary: true
   },
   {
     id: '0008',
@@ -62,6 +69,7 @@ export const bookList = [
     title: 'Tao Te Ching',
     author: 'Lao Tzu',
     link: 'https://amzn.to/3uXhzVV',
+    inLibrary: true
   },
   {
     id: '0009',
@@ -69,5 +77,6 @@ export const bookList = [
     title: 'The Book of Chuang Tzu',
     author: 'Chuang Tzu',
     link: 'https://amzn.to/3uXi967',
+    inLibrary: true
   },
 ]

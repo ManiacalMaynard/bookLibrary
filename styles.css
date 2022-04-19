@@ -36,34 +36,3 @@ button {
 .bookImage {
   width: 10rem;
 }
-
-.arrow-pointer {
-  width: 250px;
-  height: 50px;
-  background: var(--blood-red);
-  position: relative;
-}
-
-.arrow-pointer:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 25px solid var(--tan-light);
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-}
-
-.arrow-pointer:before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-right: 25px solid var(--tan-light);
-  border-top: 25px solid transparent;
-  border-bottom: 25px solid transparent;
-}
