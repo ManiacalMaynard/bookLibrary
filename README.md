@@ -1,4 +1,4 @@
-### Library page project for [The Odin Project](https://www.theodinproject.com)
+# Library page project for [The Odin Project](https://www.theodinproject.com)
 
 Learning is fun. [Here's the project page](https://www.theodinproject.com/lessons/node-path-javascript-library) for those interested in more specifics.
 
