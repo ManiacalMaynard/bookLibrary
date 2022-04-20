@@ -45,7 +45,7 @@ function deckBuilder() {
     const content = `
     <img src=${item.image} />
     <h3>${item.title}</h3>
-    <h4>${item.author}</h4>
+    <p>by ${item.author}</p>
     <a href=${item.link} target="_blank"><button>Amazon</button></a>
     <p>In Library: ${item.inLibrary}</p>
     `

@@ -3,6 +3,7 @@
   --highlight-blue: hsl(192, 73%, 36%);
   --background: hsl(240, 1%, 86%);
   --mid-tone: hsl(280, 3%, 77%);
+  --shadows: hsla(0, 0%, 30%, 0.3);
 }
 
 *,
@@ -15,9 +16,23 @@
 
 /*     -----     Typography Setup     -----     */
 body {
+  padding: 1rem;
   font-family: 'Lato', sans-serif;
   font-weight: 100;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+section {
 }
 
 h1, h2, h3 {
@@ -29,12 +44,15 @@ h1 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 body {
   background-color: var(--background);
   display: grid;
+}
+
+#addBookbtn {
 }
 
 #cardDeck {
@@ -54,14 +72,26 @@ body {
   text-align: center;
   background-color: var(--mid-tone);
   border: 1px solid #aaaaaa;
-  border-radius: 1%;
+  border-radius: 2%;
+  box-shadow: -2px 2px 2px var(--shadows);
+  transition: 150ms;
+}
+
+/* .card:hover {
+  scale: 1.02;
+  box-shadow: -5px 5px 5px var(--shadows);
+} */
+
+.card > * {
+  margin-top: 0.5rem;
 }
 
 .card > img {
   width: 10rem;
 }
 
-.card > a > button {
+button {
+  font-weight: bold;
   padding: 0.5rem 1rem;
   border: 0px solid pink;
   border-radius: 1rem;
@@ -71,6 +101,6 @@ body {
   transition: 150ms;
 }
 
-.card > a > button:hover {
+button:hover {
   background-color: var(--highlight-red);
 }
