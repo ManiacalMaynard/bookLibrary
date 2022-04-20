@@ -12,11 +12,6 @@ function Book (image, title, author, link, inLibrary) {
 // Adds build function to the Book.prototype
 Book.prototype.build = function() {
   cardDeck.appendChild('div')
-  // document.appendChild('.bookImage').src = this.image
-  // document.appendChild('.bookTitle').innerText = this.title
-  // document.appendChild('.bookAuthor').innerText = this.author
-  // document.appendChild('.bookLink').href = this.link
-  // document.appendChild('.inLibrary').innerText = this.inLibrary
 };
 
 // Need to add a button that will add a new book object to the end of the bookList array, needs to call BUILDER again to re-populate the cardDeck div container
@@ -44,16 +39,22 @@ function addBook(image, title, author, link, inLibrary) {
 function deckBuilder() {
   const books = document.getElementById('cardDeck')
 
-  bookList.forEach(bookList => {
-    const card = document.createElement('div')
+  bookList.forEach(item => {
+
+  const card = document.createElement('div')
+    const content = `
+    <img src=${item.image} />
+    <h3>${item.title}</h3>
+    <h4>${item.author}</h4>
+    <a href=${item.link} target="_blank"><button>Amazon</button></a>
+    <p>In Library: ${item.inLibrary}</p>
+    `
     card.classList.add('card')
+    card.setAttribute('id', item.id)
+    card.innerHTML = content;
+
     books.appendChild(card)
-    for (let key in bookList) {
-      // console.log(`${key}: ${bookList[key]}`)
-      const text = document.createElement('p')
-      text.innerHTML = (`${key}: ${bookList[key]}`)
-      card.appendChild(text)
-    }
+
   })
 }
 

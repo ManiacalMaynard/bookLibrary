@@ -1,7 +1,7 @@
 :root {
   --blood-red: rgb(200, 45, 40);
-  --tan-light: rgb(255, 248, 230);
-  --tan-dark: rgb(255, 243, 214);
+  --tan-light: rgb(255, 255, 230);
+  --tan-dark: rgb(255, 255, 200);
 }
 
 *,
@@ -20,7 +20,7 @@ button {
   backgroud-color: var(--blood-red);
 }
 
-#bookCard {
+.card {
   padding: 1rem;
   width: 250px;
   display: flex;
@@ -33,6 +33,6 @@ button {
   border-radius: 3%;
 }
 
-.bookImage {
+.card > img {
   width: 10rem;
 }
