@@ -1,7 +1,8 @@
 :root {
-  --blood-red: rgb(200, 45, 40);
-  --tan-light: rgb(255, 255, 230);
-  --tan-dark: rgb(255, 255, 200);
+  --highlight-red: hsl(360, 100%, 25%);
+  --highlight-blue: hsl(192, 73%, 36%);
+  --background: hsl(240, 1%, 86%);
+  --mid-tone: hsl(280, 3%, 77%);
 }
 
 *,
@@ -13,26 +14,44 @@
 }
 
 body {
-  background-color: var(--tan-light);
+  background-color: var(--background);
+  display: grid;
 }
 
-button {
-  backgroud-color: var(--blood-red);
+#cardDeck {
+  padding: 0.25rem;
+  display: grid;
+  gap: 1.0rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 }
 
 .card {
-  padding: 1rem;
-  width: 250px;
+  padding: 1rem 0.5rem ;
+  width: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: var(--tan-dark);
+  background-color: var(--mid-tone);
   border: 1px solid #aaaaaa;
-  border-radius: 3%;
+  border-radius: 1%;
 }
 
 .card > img {
   width: 10rem;
+}
+
+.card > a > button {
+  padding: 0.5rem 1rem;
+  border: 0px solid pink;
+  border-radius: 1rem;
+  background-color: var(--highlight-blue);
+  color: var(--background);
+  cursor: pointer;
+  transition: 150ms;
+}
+
+.card > a > button:hover {
+  background-color: var(--highlight-red);
 }
