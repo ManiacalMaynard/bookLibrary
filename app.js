@@ -1,17 +1,12 @@
 import { bookList } from './booklist.js';
 
-// Creates the Book object deckBuilder()
+// Creates the Book object
 function Book (image, title, author, link, inLibrary) {
   this.image = image
   this.title = title
   this.author = author
   this.link = link
   this.inLibrary = inLibrary
-};
-
-// Adds build function to the Book.prototype
-Book.prototype.build = function() {
-  cardDeck.appendChild('div')
 };
 
 // Need to add a button that will add a new book object to the end of the bookList array, needs to call BUILDER again to re-populate the cardDeck div container

@@ -1,8 +1,9 @@
+/*     -----     Set up, reset, and variables     -----     */
 :root {
   --highlight-red: hsl(360, 100%, 25%);
   --highlight-blue: hsl(192, 73%, 36%);
-  --background: hsl(240, 1%, 86%);
-  --mid-tone: hsl(280, 3%, 77%);
+  --background: hsl(240, 3%, 75%);
+  --mid-tone: hsl(280, 3%, 85%);
   --shadows: hsla(0, 0%, 30%, 0.3);
 }
 
@@ -14,7 +15,7 @@
   box-sizing: border-box;
 }
 
-/*     -----     Typography Setup     -----     */
+/*     -----     Main Elements Stuff     -----     */
 body {
   padding: 1rem;
   font-family: 'Lato', sans-serif;
@@ -35,7 +36,11 @@ header {
 section {
 }
 
-h1, h2, h3 {
+a {
+  color: var(--highlight-blue);
+}
+
+h1, h2, h3, footer {
   font-family: 'Playfair Display', sans-serif;
 }
 
@@ -51,6 +56,31 @@ body {
   background-color: var(--background);
   display: grid;
 }
+
+button {
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 0px solid pink;
+  border-radius: 1rem;
+  background-color: var(--highlight-blue);
+  color: var(--mid-tone);
+  cursor: pointer;
+  transition: 150ms;
+}
+
+button:hover {
+  background-color: var(--highlight-red);
+}
+
+footer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+/*     -----     Custom Elements     -----     */
 
 #addBookbtn {
 }
@@ -88,19 +118,4 @@ body {
 
 .card > img {
   width: 10rem;
-}
-
-button {
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border: 0px solid pink;
-  border-radius: 1rem;
-  background-color: var(--highlight-blue);
-  color: var(--background);
-  cursor: pointer;
-  transition: 150ms;
-}
-
-button:hover {
-  background-color: var(--highlight-red);
 }
