@@ -17,7 +17,7 @@
 
 /*     -----     Main Elements Stuff     -----     */
 body {
-  padding: 1rem;
+  padding: 2rem;
   font-family: 'Lato', sans-serif;
   font-weight: 100;
   font-size: 0.9rem;
@@ -89,7 +89,7 @@ footer {
   padding: 0.25rem;
   display: grid;
   gap: 1.0rem;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
 }
 
 .card {
@@ -119,3 +119,4 @@ footer {
 .card > img {
   width: 10rem;
 }
+
