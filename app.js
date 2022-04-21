@@ -36,28 +36,30 @@ const libraryDisplay = (item) => {
 
 // The mighty BUILDER function: Iterates through bookList array to build each card and add it to the cardDeck div container
 
+const content = (item) => {
+  return `
+<img src=${item.image} />
+<div>
+  <h3>${item.title}</h3>
+  <p>by ${item.author}</p>
+</div>
+<div class="btnRow">
+  <button class="deleteBtn" tooltip="DELETE">✖</button>
+  <a href=${item.link} target="_blank"><button>Amazon</button></a>
+  <button class="toggleBtn">${libraryDisplay(item)}</button>
+</div>
+`};
+
 function deckBuilder() {
   const books = document.getElementById('cardDeck')
 
   bookList.forEach(item => {
 
   const card = document.createElement('div')
-    const content = `
-    <img src=${item.image} />
-    <div>
-      <h3>${item.title}</h3>
-      <p>by ${item.author}</p>
-    </div>
-    <div class="btnRow">
-      <button class="deleteBtn" tooltip="DELETE">✖</button>
-      <a href=${item.link} target="_blank"><button>Amazon</button></a>
-      <button class="toggleBtn">${libraryDisplay(item)}</button>
-    </div>
-    `
     
+    card.innerHTML = content(item);
     card.classList.add('card')
     card.setAttribute('id', item.id)
-    card.innerHTML = content;
     
     books.appendChild(card)
 
