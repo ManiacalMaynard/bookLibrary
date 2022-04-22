@@ -23,12 +23,11 @@ function Book (image, title, author, link, inLibrary) {
 // };
 
 // Need to add a libraryToggle() button that toggles the currentBook.inLibrary state
-const libraryToggle = () => {
- const toggleButtons = document.querySelector('.toggleButton')
- toggleButtons.addEventListener("click", function(){
-   console.log("another attempt ffs")
- })
-};
+// const libraryToggle = (item) => {
+//    item.inLibrary === true ?
+//    item.inLibrary = '□' :
+//    item.inLibrary = '🗹' ;
+// };
 
 // Used for the card creation, inlibrary state display
 const libraryDisplay = (item) => {
@@ -38,56 +37,38 @@ const libraryDisplay = (item) => {
 };
 
 // The mighty BUILDER function: Iterates through bookList array to build each card and add it to the cardDeck div container
-// const cardContent = (item) => {
-//   const libraryToggle = (item) => {
-//     console.log(item)
-//    };
-
-//   return `
-// <img src=${item.image} />
-// <div>
-//   <h3>${item.title}</h3>
-//   <p>by ${item.author}</p>
-// </div>
-// <div class="btnRow">
-//   <button class="deleteBtn" tooltip="DELETE">✖</button>
-//   <a href=${item.link} target="_blank"><button>Amazon</button></a>
-//   <button class="toggleBtn" onclick=[${libraryToggle(item.id)}]>${libraryDisplay(item)}</button>
-// </div>
-// `};
-
 function deckBuilder() {
   const books = document.getElementById('cardDeck')
 
   bookList.forEach(item => {
 
-  const card = document.createElement('div')
+    const card = document.createElement('div')
 
-    const bookImage = document.createElement('img')
-    bookImage.src = item.image
+    const img = document.createElement('img')
+    img.src = item.image
 
-    const bookTitle = document.createElement('h3')
-    bookTitle.innerText = item.title
+    const title = document.createElement('h3')
+    title.innerText = item.title
 
-    const bookAuthor = document.createElement('p')
-    bookAuthor.innerText = item.author
+    const author = document.createElement('p')
+    author.innerText = item.author
 
-    const cardButtons = document.createElement('div')
-    const toggleButton = document.createElement('button')
-    toggleButton.innerText = libraryDisplay(item)
-    toggleButton.className = 'toggleButton'
-    cardButtons.appendChild(toggleButton)
+    const buttons = document.createElement('div')
+    const toggle = document.createElement('button')
+    toggle.innerText = libraryDisplay(item)
+    toggle.className = 'toggle'
+    toggle.addEventListener("click", libraryToggle(item.id));
+    buttons.appendChild(toggle)
 
     // card.innerHTML = cardContent(item);
     card.classList.add('card')
     card.setAttribute('id', item.id)
-    card.appendChild(bookImage)
-    card.appendChild(bookTitle)
-    card.appendChild(bookAuthor)
-    card.appendChild(cardButtons)
+    card.appendChild(img)
+    card.appendChild(title)
+    card.appendChild(author)
+    card.appendChild(buttons)
     books.appendChild(card)
 
-    libraryToggle()
   })
 };
 
