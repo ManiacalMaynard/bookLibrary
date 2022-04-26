@@ -45,20 +45,24 @@ function addBook() {
   let title = document.getElementById('bookTitle').value
   let author = document.getElementById('bookAuthor').value
   let inLibrary = document.getElementById('bookInLibrary').value
-  bookList.push(new Book(image, title, author, inLibrary))
+  bookList.unshift(new Book(image, title, author, inLibrary))
   hideModal()
   deckBuilder()
 };
 
 // Need to add a removeBook() button that removes that book instance from the current working array and calls BUILDER to redraw the display
 const removeBook = (item) => {
-  console.log('Delete index number: ' + item)
+  // console.log('Delete index number: ' + item)
   bookList.splice(item, 1);
   deckBuilder()
 };
 
 // Need to add a libraryToggle() button that toggles the currentBook.inLibrary state
 const libraryToggle = (item) => {
+  item.inLibrary === true ?
+  item.inLibrary = false :
+  item.inLibrary = true ;
+  deckBuilder()
 };
 
 // The mighty BUILDER function: Iterates through bookList array to build each card and add it to the cardDeck div container
@@ -89,6 +93,7 @@ function deckBuilder() {
 
     const toggle = document.createElement('button')
     toggle.innerText = item.inLibrary === true ? '🗹' : '□' ;
+    toggle.addEventListener('click', function() { libraryToggle(item) })
     buttons.appendChild(toggle)
 
     // card.innerHTML = cardContent(item);
