@@ -58,7 +58,6 @@ body {
 }
 
 button {
-  font-weight: bold;
   padding: 0.5rem 1rem;
   border: 0px solid pink;
   border-radius: 1rem;
