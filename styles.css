@@ -82,6 +82,29 @@ footer {
 
 /*     -----     Custom Elements     -----     */
 
+#bookForm {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: hsla(280, 1%, 85%, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bookForm > form {
+  width: 30vw;
+  height: auto;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  border-radius: 2%;
+  box-shadow: -2px 2px 2px var(--shadows);
+  transition: 150ms;
+}
+
 #addBookbtn {
 }
 
